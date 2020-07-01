@@ -3,7 +3,8 @@ const closeBtn = document.getElementById("close-btn");
 const rules = document.getElementById("rules");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-var color = "#0095dd"
+var color = "#0095dd";
+var gamePaused = false;
 
 let score = 0;
 let niveau = 1
@@ -239,6 +240,7 @@ function update(){
     requestAnimationFrame(update);
 }
 
+
 update();
 
 // Evenement du clavier
@@ -264,8 +266,13 @@ function keyUp(e){
     
 }
 
+// Ajout d'une option pause
+
+
+
 
 // Evenement du clavier avec les main
+
 
 document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
